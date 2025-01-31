@@ -1,75 +1,4 @@
-// 'use client'
-// import React, { useState } from 'react'
-// import axios from 'axios'
 
-// export default function Page() {
-//   const [searchQuery, setSearchQuery] = useState(""); // Search query state
-//   const [filteredData, setFilteredData] = useState(""); // Store filtered products
-//   const [data , setImage] = useState([]); // imageStore
-
-
-//     // Fetch images
-//     const getImages = async () => {
-//       try {
-//           const results = await axios.get('https://pixabay.com/api/');
-//           setImage(results.data);
-//           setFilteredData(results.data); // Initialize filtered data
-//       } catch (error) {
-//           console.error(error);
-//       }
-//   };
-
-//   const handleSearch = (query) => {
-//     setSearchQuery(query);
-//     if (query.trim() === "") {
-//         setFilteredData(data); // Reset to all products if query is empty
-//     } else {
-//         const filteredResults = data.filter(product =>
-//             product.title.toLowerCase().includes(query.toLowerCase())
-//         );
-//         setFilteredData(filteredResults);
-//     }
-// };
-//   return (
-//     <div className='bg-black h-[100vh]' style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2022/01/08/16/01/lamp-6924294_640.jpg')"}}>
-//     <div className='flex  font-semibold  justify-center  text-white p-4  '>
-//       Royalty Free and Free images to download
-//     </div>
-
-//     <div className="flex gap-3 items-center justify-center"> 
-//               <button className='border rounded-full  border-full bg-white bg-opacity-20 hover:bg-opacity-50 backdrop-blur-md text-gray-400 transition px-2 py-2'>
-//                 Images
-//               </button>
-//               <button className='border rounded-full  border-full bg-white bg-opacity-20 hover:bg-opacity-50 backdrop-blur-md text-gray-400 transition px-2 py-2'>
-//                 Videos
-//               </button>
-//               <button className='border rounded-full  border-full bg-white bg-opacity-20 hover:bg-opacity-50 backdrop-blur-md text-gray-400 transition px-2 py-2'>
-//                 Vector
-//               </button>
-//               <button className='border rounded-full  border-full bg-white bg-opacity-20 hover:bg-opacity-50 backdrop-blur-md text-gray-400 transition px-2 py-2'>
-//                 Illustration
-//               </button>
-              
-//             </div>
-
-
-
-//     <div className="flex p-5 justify-center my-5 bg-transparent">
-//                 <input
-//                     type="text"
-//                     placeholder="Browse images, videos, illustrations"
-//                     value={searchQuery}
-//                     onChange={(e) => handleSearch(e.target.value)}
-//                     className=" bg-white bg-opacity-50 text-white rounded-full border  px-6 py-2 w-[60%] focus: outline-none border-grey-500 "
-//                 />
-//             </div>
-
-           
-
-
-//     </div>
-//   )
-// }
 
 "use client";
 import React, { useState, useEffect, useRef, useCallback } from "react";
@@ -157,7 +86,7 @@ export default function Page() {
       style={{
         backgroundImage:
           "url('https://cdn.pixabay.com/photo/2022/01/08/16/01/lamp-6924294_640.jpg')",
-        backgroundSize: "cover",
+        // backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >

@@ -84,8 +84,8 @@ export default function Page() {
   const [error, setError] = useState(null); // Error state
   const [hasMore, setHasMore] = useState(true); // Track if more data is available
 
-  const API_KEY = "48519106-769071a4658cf5b75ab37a4bc"; // Replace with your Pixabay API key
-
+  const API_KEY = process.env.NEXT_PUBLIC_PIXABAY_API_KEY;
+  
   // Infinite scroll observer
   const observer = useRef();
   const lastImageRef = useCallback(
